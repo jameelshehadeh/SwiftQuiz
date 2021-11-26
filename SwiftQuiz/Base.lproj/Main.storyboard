@@ -1,24 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jM1-k5-VxS">
+                                <rect key="frame" x="20" y="568" width="374" height="52"/>
+                                <color key="backgroundColor" name="SwiftOrange"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="j08-bL-GZr"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start quiz !"/>
+                                <connections>
+                                    <segue destination="RKd-3F-dFg" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="HLY-Nv-0kR"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SwiftQuiz" translatesAutoresizingMaskIntoConstraints="NO" id="yoc-3g-7Ne">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yoc-3g-7Ne" secondAttribute="height" multiplier="1:1" id="EoR-Lx-Upt"/>
+                                    <constraint firstAttribute="width" constant="200" id="kfJ-Xa-mAe"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="jM1-k5-VxS" firstAttribute="top" secondItem="yoc-3g-7Ne" secondAttribute="bottom" constant="20" id="0RF-xp-OSU"/>
+                            <constraint firstItem="yoc-3g-7Ne" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DeF-Ea-fMM"/>
+                            <constraint firstItem="jM1-k5-VxS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="STR-Z2-4L8"/>
+                            <constraint firstItem="yoc-3g-7Ne" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pgp-Yd-mSr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jM1-k5-VxS" secondAttribute="trailing" constant="20" id="uyB-eD-GVL"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-148" y="-25"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="Dcj-G2-uf8">
+            <objects>
+                <viewController id="RKd-3F-dFg" customClass="QuizViewController" customModule="SwiftQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XDv-WE-IN6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="91" translatesAutoresizingMaskIntoConstraints="NO" id="M1Y-OH-G2L">
+                                <rect key="frame" x="20" y="746" width="374" height="52"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rde-wS-yFb">
+                                        <rect key="frame" x="0.0" y="0.0" width="141.5" height="52"/>
+                                        <color key="backgroundColor" name="SwiftOrange"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Previous Question">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="previousPressed:" destination="RKd-3F-dFg" eventType="touchUpInside" id="4YP-g3-zoB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kV-q4-pTw">
+                                        <rect key="frame" x="232.5" y="0.0" width="141.5" height="52"/>
+                                        <color key="backgroundColor" name="SwiftOrange"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Next Question">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextPressed:" destination="RKd-3F-dFg" eventType="touchUpInside" id="6UU-zN-dCE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="9qE-GA-AEC"/>
+                                </constraints>
+                            </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GVD-SZ-Ubb">
+                                <rect key="frame" x="20" y="838" width="374" height="4"/>
+                                <color key="tintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="nTZ-AH-ijF"/>
+                                </constraints>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPQ-8g-Ty2">
+                                <rect key="frame" x="20" y="698" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XX4-e6-D7e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wrc-GM-9cN" userLabel="Lower Answers Stack View">
+                                <rect key="frame" x="20" y="558" width="374" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qy3-kU-xlN">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <color key="backgroundColor" name="SwiftOrange"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="3rd option">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="thirdOptionPressed:" destination="RKd-3F-dFg" eventType="touchUpInside" id="EVD-Z9-cQt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHN-oT-qjm">
+                                        <rect key="frame" x="0.0" y="70" width="374" height="50"/>
+                                        <color key="backgroundColor" name="SwiftOrange"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="4th Option">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="forthOptionPressed:" destination="RKd-3F-dFg" eventType="touchUpInside" id="Ejc-ej-RvC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="0mZ-xB-OUH"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EO6-Aw-WV4">
+                                <rect key="frame" x="20" y="418" width="374" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpK-UZ-4PP">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <color key="backgroundColor" name="SwiftOrange"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="True">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="firstOptionPressed:" destination="RKd-3F-dFg" eventType="touchUpInside" id="yzv-um-L0h"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fu-hC-Yq5">
+                                        <rect key="frame" x="0.0" y="70" width="374" height="50"/>
+                                        <color key="backgroundColor" name="SwiftOrange"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="False">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="secondOptionPressed:" destination="RKd-3F-dFg" eventType="touchUpInside" id="f9G-2J-fYI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="8ZK-Rl-h56"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which of the statmets is an async ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="VHK-Xs-vje">
+                                <rect key="frame" x="20" y="64" width="374" height="334"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pd3-74-2Y9"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="EO6-Aw-WV4" firstAttribute="leading" secondItem="Pd3-74-2Y9" secondAttribute="leading" constant="20" id="4Le-Es-KSu"/>
+                            <constraint firstItem="Pd3-74-2Y9" firstAttribute="trailing" secondItem="M1Y-OH-G2L" secondAttribute="trailing" constant="20" id="5lm-Uf-BAl"/>
+                            <constraint firstItem="M1Y-OH-G2L" firstAttribute="leading" secondItem="Pd3-74-2Y9" secondAttribute="leading" constant="20" id="CSY-V5-XCd"/>
+                            <constraint firstItem="Pd3-74-2Y9" firstAttribute="trailing" secondItem="VHK-Xs-vje" secondAttribute="trailing" constant="20" id="Hzd-IY-6Zo"/>
+                            <constraint firstItem="M1Y-OH-G2L" firstAttribute="top" secondItem="GPQ-8g-Ty2" secondAttribute="bottom" constant="8" symbolic="YES" id="QWo-aM-8UA"/>
+                            <constraint firstItem="Pd3-74-2Y9" firstAttribute="trailing" secondItem="GPQ-8g-Ty2" secondAttribute="trailing" constant="20" id="RWi-ym-jW0"/>
+                            <constraint firstItem="Wrc-GM-9cN" firstAttribute="top" secondItem="EO6-Aw-WV4" secondAttribute="bottom" constant="20" id="VMv-wA-oBv"/>
+                            <constraint firstItem="Pd3-74-2Y9" firstAttribute="trailing" secondItem="EO6-Aw-WV4" secondAttribute="trailing" constant="20" id="YR5-Hd-sWm"/>
+                            <constraint firstItem="Pd3-74-2Y9" firstAttribute="trailing" secondItem="Wrc-GM-9cN" secondAttribute="trailing" constant="20" id="YSM-44-nAg"/>
+                            <constraint firstItem="EO6-Aw-WV4" firstAttribute="top" secondItem="VHK-Xs-vje" secondAttribute="bottom" constant="20" id="a3A-CQ-0j9"/>
+                            <constraint firstItem="GPQ-8g-Ty2" firstAttribute="leading" secondItem="Pd3-74-2Y9" secondAttribute="leading" constant="20" id="aqx-uO-Kdb"/>
+                            <constraint firstItem="VHK-Xs-vje" firstAttribute="leading" secondItem="Pd3-74-2Y9" secondAttribute="leading" constant="20" id="bFg-Rp-xwR"/>
+                            <constraint firstItem="Wrc-GM-9cN" firstAttribute="leading" secondItem="Pd3-74-2Y9" secondAttribute="leading" constant="20" id="hn6-Vz-WzH"/>
+                            <constraint firstItem="GPQ-8g-Ty2" firstAttribute="top" secondItem="Wrc-GM-9cN" secondAttribute="bottom" constant="20" id="hyq-kx-LXv"/>
+                            <constraint firstItem="Pd3-74-2Y9" firstAttribute="trailing" secondItem="GVD-SZ-Ubb" secondAttribute="trailing" constant="20" id="jB0-XB-8Ae"/>
+                            <constraint firstItem="GVD-SZ-Ubb" firstAttribute="leading" secondItem="Pd3-74-2Y9" secondAttribute="leading" constant="20" id="lKn-zX-Afs"/>
+                            <constraint firstItem="VHK-Xs-vje" firstAttribute="top" secondItem="Pd3-74-2Y9" secondAttribute="top" constant="20" id="m1N-Jt-BA7"/>
+                            <constraint firstItem="Pd3-74-2Y9" firstAttribute="bottom" secondItem="GVD-SZ-Ubb" secondAttribute="bottom" constant="20" id="oac-6h-u00"/>
+                            <constraint firstItem="GVD-SZ-Ubb" firstAttribute="top" secondItem="M1Y-OH-G2L" secondAttribute="bottom" constant="40" id="qdx-rY-vlV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SuU-HS-TPb"/>
+                    <connections>
+                        <outlet property="firstOptionButton" destination="MpK-UZ-4PP" id="54n-Tb-Ge1"/>
+                        <outlet property="forthOptionButton" destination="UHN-oT-qjm" id="hTb-zF-odb"/>
+                        <outlet property="lowerAnswersStackView" destination="Wrc-GM-9cN" id="ZYt-IJ-7B5"/>
+                        <outlet property="progressView" destination="GVD-SZ-Ubb" id="I6H-rO-jX9"/>
+                        <outlet property="questionLabel" destination="VHK-Xs-vje" id="RX2-n4-x2D"/>
+                        <outlet property="scoreLabel" destination="GPQ-8g-Ty2" id="2bF-Ql-tEU"/>
+                        <outlet property="secondOptionButton" destination="8Fu-hC-Yq5" id="5FR-iY-aX8"/>
+                        <outlet property="thirdOptionButton" destination="Qy3-kU-xlN" id="Ssn-ac-Ckh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iGc-SE-2e2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="728.98550724637687" y="-25.446428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SwiftQuiz" width="500" height="500"/>
+        <namedColor name="SwiftOrange">
+            <color red="0.97074431179999998" green="0.5971777439" blue="0.2434387207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
