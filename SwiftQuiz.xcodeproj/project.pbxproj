@@ -43,6 +43,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA11ABFA2756593000BD37A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA111676274FFF5300595497 /* QuizManager.swift */,
+				FA111674274FF1C800595497 /* Question.swift */,
+				FA11ABFB2756593F00BD37A6 /* Views */,
+				FA11ABFC2756594D00BD37A6 /* Controllers */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA11ABFB2756593F00BD37A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3F893274FE96B00643308 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA11ABFC2756594D00BD37A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA111670274FEE3F00595497 /* QuizViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		FAA3F881274FE96B00643308 = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +89,13 @@
 		FAA3F88C274FE96B00643308 /* SwiftQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				FA11ABFA2756593000BD37A6 /* Models */,
 				FAA3F88D274FE96B00643308 /* AppDelegate.swift */,
 				FAA3F88F274FE96B00643308 /* SceneDelegate.swift */,
-				FA111670274FEE3F00595497 /* QuizViewController.swift */,
 				FAA3F891274FE96B00643308 /* ViewController.swift */,
-				FAA3F893274FE96B00643308 /* Main.storyboard */,
 				FAA3F896274FE96F00643308 /* Assets.xcassets */,
 				FAA3F898274FE96F00643308 /* LaunchScreen.storyboard */,
 				FAA3F89B274FE96F00643308 /* Info.plist */,
-				FA111674274FF1C800595497 /* Question.swift */,
-				FA111676274FFF5300595497 /* QuizManager.swift */,
 			);
 			path = SwiftQuiz;
 			sourceTree = "<group>";

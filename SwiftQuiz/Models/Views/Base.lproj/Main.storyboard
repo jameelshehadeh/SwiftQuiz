@@ -112,7 +112,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wrc-GM-9cN" userLabel="Lower Answers Stack View">
                                 <rect key="frame" x="20" y="558" width="374" height="120"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qy3-kU-xlN">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qy3-kU-xlN">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                         <color key="backgroundColor" name="SwiftOrange"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -124,7 +124,7 @@
                                             <action selector="thirdOptionPressed:" destination="RKd-3F-dFg" eventType="touchUpInside" id="EVD-Z9-cQt"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHN-oT-qjm">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHN-oT-qjm">
                                         <rect key="frame" x="0.0" y="70" width="374" height="50"/>
                                         <color key="backgroundColor" name="SwiftOrange"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -144,7 +144,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EO6-Aw-WV4">
                                 <rect key="frame" x="20" y="418" width="374" height="120"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpK-UZ-4PP">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpK-UZ-4PP">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                         <color key="backgroundColor" name="SwiftOrange"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -156,7 +156,7 @@
                                             <action selector="firstOptionPressed:" destination="RKd-3F-dFg" eventType="touchUpInside" id="yzv-um-L0h"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fu-hC-Yq5">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fu-hC-Yq5">
                                         <rect key="frame" x="0.0" y="70" width="374" height="50"/>
                                         <color key="backgroundColor" name="SwiftOrange"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -209,6 +209,8 @@
                         <outlet property="firstOptionButton" destination="MpK-UZ-4PP" id="54n-Tb-Ge1"/>
                         <outlet property="forthOptionButton" destination="UHN-oT-qjm" id="hTb-zF-odb"/>
                         <outlet property="lowerAnswersStackView" destination="Wrc-GM-9cN" id="ZYt-IJ-7B5"/>
+                        <outlet property="nextButton" destination="0kV-q4-pTw" id="KXJ-1D-h5w"/>
+                        <outlet property="previousButton" destination="rde-wS-yFb" id="CwB-NE-zP8"/>
                         <outlet property="progressView" destination="GVD-SZ-Ubb" id="I6H-rO-jX9"/>
                         <outlet property="questionLabel" destination="VHK-Xs-vje" id="RX2-n4-x2D"/>
                         <outlet property="scoreLabel" destination="GPQ-8g-Ty2" id="2bF-Ql-tEU"/>
@@ -224,7 +226,7 @@
     <resources>
         <image name="SwiftQuiz" width="500" height="500"/>
         <namedColor name="SwiftOrange">
-            <color red="0.97074431179999998" green="0.5971777439" blue="0.2434387207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.97100001573562622" green="0.59700000286102295" blue="0.24300000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
